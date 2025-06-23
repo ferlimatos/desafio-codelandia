@@ -40,7 +40,7 @@ body {
 }
 
 .destaque {
-  background: url(/img/image-michael-jordan.png) no-repeat center center;
+  background: url(img/image-michael-jordan.png) no-repeat center center;
   background-size: cover;
   padding: 4rem 2rem;
   color: var(--white);
