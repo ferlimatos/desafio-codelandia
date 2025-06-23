@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --brand-color: #7ca2f4;
+
+  --dark: #121214;
+
+  --gray: #f3f7ff;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Archivo", sans-serif;
+}
+
+/* Reset básico */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 76rem; /* 1216px */
+  margin-inline: auto; /* centraliza horizontalmente */
+  padding-inline: 1rem; /* espaçamento lateral em telas pequenas */
+}
+
+
+.topo-frete {
+    display: flex;
+    justify-content: center;
+    padding: 1.125rem;
+    background: var(--gray);
+}
+
+.topo-frete__texto {
+    font-size: 1.5rem;
+}
+
+.destaque {
+  background: url(/img/image-michael-jordan.png) no-repeat center center;
+  background-size: cover;
+  padding: 4rem 2rem;
+  color: var(--white);
+  height: 25rem;
+}
+
+.destaque__conteudo {
+  display: flex;
+}
+
+.produtos {
+  padding: 4rem 2rem;
+  background: #fff;
+  text-align: center;
+}
+
+.produtos__cabecalho {
+  max-width: 76rem;
+  margin: 0 auto 3rem;
+  gap: 1.5rem;
+}
+
+.produtos__titulo {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.produtos__descricao {
+  color: var(--dark);
+  font-size: 1.5rem;
+  line-height: 140%; /* 33.6px */
+}
+
+.produtos__grade {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.produto {
+  border-radius: 8px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+}
+
+.produto__imagem {
+  width: 25rem;
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.nome__do__produto {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.produto__categoria {
+  font-size: 0.875rem;
+  color: var(--brand-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.produto__preco {
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 1.25rem;
+}

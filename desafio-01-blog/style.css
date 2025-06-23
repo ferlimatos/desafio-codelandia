@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+/* Reset básico */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+  --brand-color: #e07b67;
+
+  --dark-10: #121214;
+  --dark-20: #17171a;
+  --dark-30: #202024;
+  --dark-40: #252529;
+
+  --gray: #afabb6;
+  --white: #ffffff;
+}
+
+/* Layout base (mobile first) */
+body {
+  background: var(--dark-10);
+  font-size: 1rem;
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  background-color: var(--dark-20);
+}
+
+.form-busca {
+  width: 100%;
+  display: flex;
+}
+
+.form-busca input[type="text"] {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 2px solid var(--dark-40);
+  background: var(--dark-30);
+  color: var(--gray);
+  font-size: 1rem;
+}
+
+/* Postagens */
+.postagens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.postagem {
+  background: var(--dark-20);
+  width: 100%;
+  max-width: 100%;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border: 2px solid var(--dark-40);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(19, 19, 31, 0.05);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.postagem:hover {
+  box-shadow: 0 0 15px rgba(19, 19, 31, 0.2);
+}
+
+.postagem:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--brand-color);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.postagem-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-like {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn-like:hover .icon {
+  transform: scale(1.1);
+}
+
+.btn-like.liked {
+  color: var(--brand-color);
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+  color: var(--brand-color);
+}
+
+/* Esconde o ícone preenchido por padrão */
+.icon-heart-filled {
+  display: none;
+}
+
+.btn-like.liked .icon-heart-filled {
+  display: inline;
+}
+
+.btn-like.liked .icon-heart-empty {
+  display: none;
+}
+
+.postagem-titulo {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 600;
+  color: var(--white);
+  margin: 1.25rem 0 1rem;
+}
+
+.postagem-resumo {
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+.data {
+  color: var(--brand-color);
+}
+
+/* Tablets (min-width: 768px) */
+@media (min-width: 768px) {
+  .form-busca {
+    max-width: 600px;
+  }
+
+  .postagem {
+    max-width: 600px;
+  }
+}
+
+/* Desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .form-busca {
+    max-width: 76rem;
+  }
+
+  .postagem {
+    max-width: 76rem;
+  }
+}
