@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
   --brand-color: #7ca2f4;
@@ -10,7 +11,7 @@
 }
 
 body {
-  font-family: "Archivo", sans-serif;
+  font-family: 'Archivo', sans-serif;
 }
 
 /* Reset básico */
@@ -31,14 +32,15 @@ body {
   display: flex;
   justify-content: center;
   padding: 1.125rem;
-  background: var(--gray);
+  background: #7ca2f4;
 }
 
 .topo-frete__texto {
-  font-size: 1rem;
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.destaque {
+.hero {
   background: url(img/image-michael-jordan.png) no-repeat center center;
   background-size: cover;
   padding: 4rem 2rem;
@@ -46,8 +48,27 @@ body {
   height: 25rem;
 }
 
-.destaque__conteudo {
+.destaque-conteudo {
   display: flex;
+  flex-direction: column;
+}
+
+.destaque__titulo {
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.destaque__descricao {
+  font-size: 24px;
+  line-height: 140%;
+  max-width: 557px;
+}
+
+.hero__logo {
+  width: 100%;
+  max-width: 203px;
+  margin-bottom: 40px;
 }
 
 .produtos {
@@ -77,7 +98,7 @@ body {
 .produtos__grade {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -113,6 +134,24 @@ body {
 
 .produto__preco {
   color: var(--dark);
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1.25rem;
+  font-family: 'Space Grotesk';
+  margin-top: 24px;
+}
+
+@media screen and (max-width: 480px) {
+  .produtos__grade {
+    display: flex;
+    flex-direction: column;
+  }
+  .destaque__titulo{
+    font-size: 18px;
+  }
+  .produtos__titulo {
+    font-size: 20px;
+  }
+  .produtos__descricao{
+    font-size: 16px;
+  }
 }
